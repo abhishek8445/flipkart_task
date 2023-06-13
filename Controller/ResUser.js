@@ -2,7 +2,10 @@ import { FetchMobile ,FetchTshirt } from "../Service/UserService.js"
 
 const FetchMobileCategory = async (req, res) => {
     try {
-        await FetchMobile()
+       await FetchMobile();
+ 
+  
+
        res.json({ status: true, message:"Fetch Mobile Data Successfully" })
     }
     catch (err) {
