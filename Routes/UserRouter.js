@@ -3,7 +3,7 @@ import { FetchMobileCategory , FetchSnapdealTshirt } from "../Controller/ResUser
 
 const Router = express.Router();
 
-Router.get('/flipkart/mobile' , FetchMobileCategory)
+Router.get('/flipkart/mobile?' , FetchMobileCategory)
 Router.get('/snapdeal/t-shirt' , FetchSnapdealTshirt)
 
 
