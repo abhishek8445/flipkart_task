@@ -2,14 +2,12 @@ import { FetchMobile ,FetchTshirt } from "../Service/UserService.js"
 
 const FetchMobileCategory = async (req, res) => {
     try {
-       await FetchMobile();
- 
-  
-
+       const Pagination = req.query
+       await FetchMobile(Pagination);
        res.json({ status: true, message:"Fetch Mobile Data Successfully" })
     }
     catch (err) {
-       res.json({ status: false, error: err.keyValue, message:err.message })
+       res.json({ status: false, error:err.keyValue, message:err.message })
     }
  }
  
