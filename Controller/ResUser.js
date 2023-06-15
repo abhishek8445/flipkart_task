@@ -13,7 +13,8 @@ const FetchMobileCategory = async (req, res) => {
  
  const FetchSnapdealTshirt = async (req, res) => {
     try {
-        await FetchTshirt()
+      const CurrentPageNo  =req.query
+        await FetchTshirt(CurrentPageNo)
        res.json({ status: true, message:"Fetch Snapdeal T-Shirt Data Successfully" })
     }
     catch (err) {

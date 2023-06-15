@@ -4,7 +4,7 @@ const MobileSchema = mongoose.Schema({
     MobileImg :{
         type:String,
     },
-    MobileDetails:{
+    MobileName:{
         type:String,
     },
     MobileActualPrice:{
@@ -19,8 +19,24 @@ const MobileSchema = mongoose.Schema({
     MobileDetails:{
         type:String,
     },
-})
+}) 
 
 const FlipkartModel = new mongoose.model("MobileData"  , MobileSchema )
 
-export default FlipkartModel ; 
+const TshirtSchema =  mongoose.Schema({
+    TshirtImg :{
+        type:String
+    },
+    TshirtName :{
+        type:String
+    },
+    TshirtPrice :{
+        type:String
+    },
+    Discount :{
+        type:String
+    },
+})
+const TshirtModel = mongoose.model("TshirtData" , TshirtSchema )
+
+export  {FlipkartModel , TshirtModel } ; 
